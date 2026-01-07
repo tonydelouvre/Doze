@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doze</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon-192.png">
+  <meta name="theme-color" content="#6366f1">
+</head>
+<body>
+
+<div id="offlineBanner" class="offline-banner">
+⚠️ Kamu sedang offline
+</div>
+
+<div class="app-wrapper">
+    <main class="app">
+
+        <h1>Doze</h1>
+        <p class="subtitle">Track your sleep, gently.</p>
+
+        <div class="form">
+            <label>
+            Waktu Tidur
+            <input type="time" id="sleepTime">
+            </label>
+
+            <label>
+            Waktu Bangun
+            <input type="time" id="wakeTime">
+            </label>
+
+            <button id="checkBtn">Check Sleep</button>
+
+            <label class="reminder">
+                <input type="checkbox" id="reminderToggle">
+                Aktifkan reminder tidur
+            </label>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <canvas id="sleepChart" width="320" height="160"></canvas>
+
+        <div class="stats" id="weeklyStats"></div>
+
+        <button id="exportCsvBtn" class="export-btn">
+            Export CSV
+        </button>
+
+        <div class="privacy">
+            <label>
+                <input type="checkbox" id="privacyModeToggle">
+                Privacy Mode (jangan simpan histori)
+            </label>
+
+            <button id="resetDataBtn" class="reset-btn">
+                Reset Semua Data
+            </button>
+        </div>
+        
+    </main>
+</div>
+
+<script src="js/time.js"></script>
+<script src="js/sleep.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/reminder.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
